@@ -1,0 +1,74 @@
+* {
+    margin: 0; /* Remove margens */
+    padding: 0; /* Remove preenchimento */
+    box-sizing: border-box; /* Inclui bordas e preenchimento no tamanho total */
+}
+
+body, html {
+    height: 100%; /* Define altura total para o corpo e html */
+    font-family: 'Cursive', sans-serif; /* Define a fonte cursiva */
+    background-color: #fef1e6; /* Cor de fundo */
+    color: #ff69b4; /* Cor do texto */
+}
+
+.container {
+    display: flex; /* Usa flexbox para layout */
+    flex-direction: column; /* Alinha os itens na vertical */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    height: 100vh; /* Define altura total da viewport */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px; /* Preenchimento interno */
+    background-image: url('fundo2.png'); /*Fundo da página */
+    background-size: cover; /* Cobre toda a área com a imagem */
+    background-position: center; /* Centraliza a imagem de fundo */
+}
+
+h1 {
+    font-size: 3rem; /* Tamanho do texto do h1 */
+    margin-bottom: 20px; /* Margem inferior */
+}
+
+.round-button {
+    padding: 15px 30px; /* Preenchimento do botão */
+    font-size: 3rem; /* Tamanho da fonte do botão */
+    border-radius: 50px; /* Bordas arredondadas */
+    border: none; /* Remove borda padrão */
+    background-color: #ff69b4; /* Cor de fundo do botão */
+    color: rgb(251, 255, 0); /* Cor do texto do botão */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    transition: transform 0.3s; /* Transição suave para transformação */
+
+    text-shadow: 
+                1px 1px 0px rgba(0, 0, 0, 0.7),  /* Contorno superior esquerdo */
+                -1px -1px 0px rgba(0, 0, 0, 0.7), /* Contorno inferior direito */
+                1px -1px 5px rgba(0, 0, 0, 0.7),  /* Contorno superior direito */
+                -1px 1px 0px rgba(0, 0, 0, 0.7);  /* Contorno inferior esquerdo */
+}
+
+.round-button:hover {
+    transform: scale(1.1); /* Aumenta o tamanho ao passar o mouse */
+}
+
+/* Estilos para diferentes tamanhos de tela */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem; /* Tamanho do h1 em telas pequenas */
+    }
+
+    .round-button {
+        font-size: 1.2rem; /* Tamanho do botão em telas pequenas */
+        padding: 10px 20px; /* Preenchimento do botão em telas pequenas */
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem; /* Tamanho do h1 em telas médias */
+    }
+
+    .round-button {
+        font-size: 1.3rem; /* Tamanho do botão em telas médias */
+        padding: 12px 25px; /* Preenchimento do botão em telas médias */
+    }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade -->
+    <title>❤</title> <!-- Título da página -->
+    <link rel="stylesheet" href="style.css"> <!-- Link para o arquivo de estilo CSS -->
+    <style>
+        /* Estilos gerais do corpo */
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Cursive', sans-serif; /* Fonte */
+            background: linear-gradient(270deg, #FF6F61, #FFD54F); /* Gradiente de fundo */
+            background-size: 400% 400%; /* Tamanho do gradiente */
+            animation: gradient 15s ease infinite; /* Animação do gradiente */
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Container central */
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Altura da tela inteira */
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Estilo do botão */
+.round-button {
+    padding: 15px 30px; /* Padding do botão */
+    font-size: 1.5rem; /* Tamanho da fonte */
+    border-radius: 50px; /* Bordas arredondadas */
+    border: none; /* Sem borda */
+    background-color: #FF9F00; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    cursor: pointer; /* Muda o cursor ao passar por cima */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+    animation: float 3s ease-in-out infinite; /* Animação de flutuação */
+}
+
+/* Efeito de hover no botão */
+.round-button:hover {
+    background-color: #FF7043; /* Muda a cor ao passar por cima */
+}
+
+/* Animação de flutuação */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0); /* Posição inicial */
+    }
+    50% {
+        transform: translateY(-10px); /* Move para cima */
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Botão que leva à próxima página -->
+        <button class="round-button" onclick="window.location.href='page2.html'">QUERO SABER 🤍🤍</button>
+    </div>
+</body>
+</html>

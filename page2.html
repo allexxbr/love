@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade -->
+    <title>❤</title> <!-- Título da página -->
+    <link rel="stylesheet" href="style.css"> <!-- Link para o arquivo de estilo CSS -->
+    <style>
+        /* Estilos gerais do corpo */
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Cursive', sans-serif; /* Fonte */
+            background: linear-gradient(270deg, #f166f1a9, #f17789); /* Fundo do branco ao rosa claro */
+            background-size: 400% 400%; /* Tamanho do gradiente */
+            animation: gradient 15s ease infinite; /* Animação do gradiente */
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Container central */
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Altura da tela inteira */
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Efeito de pulsar para a frase */
+        .pulsar {
+            animation: pulsar 1s infinite; /* Animação pulsante contínua */
+        }
+
+        @keyframes pulsar {
+            0%, 100% {
+                transform: scale(1); /* Tamanho original */
+            }
+            50% {
+                transform: scale(1.1); /* Aumenta para 110% */
+            }
+        }
+        
+        .text {
+            font-size: 3rem; /* Tamanho da fonte da frase */
+            text-align: center; /* Centraliza o texto */
+            color: #D62839; /* Cor do texto em vermelho intenso */
+            text-shadow: 
+                1px 1px 0px rgba(0, 0, 0, 0.7),  /* Contorno superior esquerdo */
+                -1px -1px 0px rgba(0, 0, 0, 0.7), /* Contorno inferior direito */
+                1px -1px 5px rgba(0, 0, 0, 0.7),  /* Contorno superior direito */
+                -1px 1px 0px rgba(0, 0, 0, 0.7);  /* Contorno inferior esquerdo */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Frase que muda a cada 3 segundos -->
+        <h1 class="pulsar text" id="loveMessage">"I'M IN LOVE WITH YOU!!</h1>
+    </div>
+
+    <script>
+        // Lista de mensagens em diferentes idiomas
+        const messages = [
+            "JE SUIS AMOUREUX DE TOI!!", // Francês
+            "ICH BIN IN DICH VERLIEBT!!", // Alemão
+            "ΕΙΜΑΙ ΕΡΩΤΕΥΜΕΝΟΣ ΜΑΖΙ ΣΟΥ!!", // Grego
+            "我爱你!!", // Chinês
+            "사랑해요!!", // Coreano
+            "أنا أحبك!!", // Árabe
+            "ISSO TUDO SIGNIFICA QUE...", // Mensagem adicional
+            "EU SOU APAIXONADO POR VOCÊ!! 🤍🧡❤💗💕", // Português
+            "😍😍😊🤭🤭🤭",
+            "Espero que goste...."
+        ];
+
+        // Lista de cores quentes para o texto
+        const colors = [
+            
+            "#FF2D00", // Vermelho vivo
+            "#FF8C00", // Laranja vibrante
+            "#FFD700", // Dourado brilhante
+            "#FF6F00", // Laranja escuro vibrante
+            "#FF3D79", // Rosa choque
+            "#FF1493", // Rosa profundo
+            "#FF4500", // Laranja vibrante
+            "#FF6347"   // Tomate vibrante
+        ];
+
+        let index = 0; // Índice da mensagem atual
+
+        // Função que troca a mensagem e a cor a cada 2 segundos
+        setInterval(() => {
+            index = (index + 1) % messages.length; // Atualiza o índice ciclicamente
+            document.getElementById('loveMessage').innerHTML = messages[index]; // Atualiza o conteúdo da mensagem
+            
+            // Muda a cor do texto
+            const colorIndex = index % colors.length; // Escolhe uma cor correspondente
+            document.getElementById('loveMessage').style.color = colors[colorIndex]; // Atualiza a cor do texto
+        }, 2000); // Troca a mensagem a cada 2 segundos
+    </script>
+</body>
+</html>
